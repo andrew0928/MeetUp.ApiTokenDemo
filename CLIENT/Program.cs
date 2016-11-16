@@ -23,7 +23,8 @@ namespace CLIENT
 
             HttpResponseMessage auth_msg = auth_client.PostAsync("/api/sessions", null).Result;
             string sessionTokenText = auth_msg.Content.ReadAsStringAsync().Result;
-            Console.WriteLine("Get Session Token: {0}", sessionTokenText);
+            Console.WriteLine("Get Session Token:");
+            Console.WriteLine(sessionTokenText);
 
 
 

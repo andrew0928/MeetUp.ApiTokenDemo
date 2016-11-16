@@ -14,8 +14,10 @@ namespace MeetUp.ApiTokenDemo.AUTH.Controllers
     public class SessionsController : ApiController
     {
         // POST api/sessions
+        // 已經註冊過的開發者，可以憑 APIKEY，向 AUTH 認證服務建立 SESSION。SESSION 建立成功後會取得 SESSION TOKEN，可以憑 TOKEN 道別的服務去呼叫 API。SESSION TOKEN 有效期限為 1hr
         [SwaggerOperation("Create")]
         [SwaggerResponse(HttpStatusCode.Created)]
+        [SwaggerOperationFilter(typeof(AddApiKeyParameter))]
         //public void Post([FromBody]string value)
         public IHttpActionResult Post()
         {
@@ -76,25 +78,5 @@ namespace MeetUp.ApiTokenDemo.AUTH.Controllers
         */
     }
 
-    public class TokenTextResult : IHttpActionResult
-    {
-        private string _keyName = null;
-        private TokenData _token = null;
-
-        public TokenTextResult(string keyname, TokenData token)
-        {
-            this._keyName = keyname;
-            this._token = token;
-        }
-
-        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
-        {
-            HttpResponseMessage resp = new HttpResponseMessage()
-            {
-                Content = new StringContent(TokenHelper.EncodeToken(this._keyName, this._token))
-            };
-
-            return Task.FromResult(resp);
-        }
-    }
+   
 }

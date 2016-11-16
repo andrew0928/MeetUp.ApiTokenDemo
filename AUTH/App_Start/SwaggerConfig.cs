@@ -61,10 +61,10 @@ namespace MeetUp.ApiTokenDemo.AUTH
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-                        //c.ApiKey("apiKey")
-                        //    .Description("API Key Authentication")
-                        //    .Name("apiKey")
-                        //    .In("header");
+                        c.ApiKey("apiKey")
+                            .Description("API Key Authentication")
+                            .Name("X-APIKEY")
+                            .In("header");
                         //
                         //c.OAuth2("oauth2")
                         //    .Description("OAuth2 Implicit Grant")
@@ -100,7 +100,7 @@ namespace MeetUp.ApiTokenDemo.AUTH
                         // those comments into the generated docs and UI. You can enable this by providing the path to one or
                         // more Xml comment files.
                         //
-                        //c.IncludeXmlComments(GetXmlCommentsPath());
+                        c.IncludeXmlComments(@"E:\BlogWork\MeetUp.ApiTokenDemo\AUTH\bin\MeetUp.ApiTokenDemo.AUTH.XML");
 
                         // Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
                         // exposed in your API. However, there may be occasions when more control of the output is needed.
@@ -187,11 +187,11 @@ namespace MeetUp.ApiTokenDemo.AUTH
                         //
                         //c.CustomProvider((defaultProvider) => new CachingSwaggerProvider(defaultProvider));
                         // ***** Uncomment the following to enable the swagger UI *****
-                        /*
+                        
                             })
                         .EnableSwaggerUi(c =>
                             {
-                        */
+                        
                         // Use the "InjectStylesheet" option to enrich the UI with one or more additional CSS stylesheets.
                         // The file must be included in your project as an "Embedded Resource", and then the resource's
                         // "Logical Name" is passed to the method as shown below.

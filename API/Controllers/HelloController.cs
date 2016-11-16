@@ -6,13 +6,24 @@ using System.Net.Http;
 using System.Web.Http;
 using Swashbuckle.Swagger.Annotations;
 using MeetUp.ApiTokenDemo.SDK;
+using Swashbuckle.Swagger;
+using System.Web.Http.Description;
 
 namespace MeetUp.ApiTokenDemo.API.Controllers
 {
+    /// <summary>
+    /// Hello API controller demo.
+    /// </summary>
     public class HelloController : ApiController
     {
         // GET api/values
+
+        /// <summary>
+        /// Hello World API test!
+        /// </summary>
+        /// <returns></returns>
         [SwaggerOperation("GetAll")]
+        [SwaggerOperationFilter(typeof(AddSessionTokenParameter))]
         public object Get()
         {
             string tokentext = this.Request.Headers.GetValues("X-SESSION").First();
@@ -60,4 +71,9 @@ namespace MeetUp.ApiTokenDemo.API.Controllers
         }
         */
     }
+
+
+
+
+
 }
