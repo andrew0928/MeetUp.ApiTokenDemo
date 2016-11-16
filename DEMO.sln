@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{0AD9A9C9-4188-4DBE-AA3D-12806CCBF4EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK", "SDK\SDK.csproj", "{30A38CE9-ECE8-425A-A345-A66A97AE9F21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AUTH", "AUTH\AUTH.csproj", "{0A4027D0-D121-4F4B-8A9D-CBF5D63C4F7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{54774CF1-952B-4A36-8325-403B85A98773}"
+	ProjectSection(SolutionItems) = preProject
+		APIKEY-PRIVATE.xml = APIKEY-PRIVATE.xml
+		APIKEY.xml = APIKEY.xml
+		APITOKEN-DEMO.pptx = APITOKEN-DEMO.pptx
+		DEMO-PRIVATE.xml = DEMO-PRIVATE.xml
+		DEMO.xml = DEMO.xml
+		README.md = README.md
+		SESSION-PRIVATE.xml = SESSION-PRIVATE.xml
+		SESSION.xml = SESSION.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIENT", "CLIENT\CLIENT.csproj", "{462872DF-76CE-474D-BCB0-8EF1559D529F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiKeyGenerator", "ApiKeyGenerator\ApiKeyGenerator.csproj", "{1A598EBF-BD3B-4E49-B9AE-1CB5B0271102}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AD9A9C9-4188-4DBE-AA3D-12806CCBF4EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD9A9C9-4188-4DBE-AA3D-12806CCBF4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD9A9C9-4188-4DBE-AA3D-12806CCBF4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD9A9C9-4188-4DBE-AA3D-12806CCBF4EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A38CE9-ECE8-425A-A345-A66A97AE9F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A38CE9-ECE8-425A-A345-A66A97AE9F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A38CE9-ECE8-425A-A345-A66A97AE9F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A38CE9-ECE8-425A-A345-A66A97AE9F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4027D0-D121-4F4B-8A9D-CBF5D63C4F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4027D0-D121-4F4B-8A9D-CBF5D63C4F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4027D0-D121-4F4B-8A9D-CBF5D63C4F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4027D0-D121-4F4B-8A9D-CBF5D63C4F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462872DF-76CE-474D-BCB0-8EF1559D529F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462872DF-76CE-474D-BCB0-8EF1559D529F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462872DF-76CE-474D-BCB0-8EF1559D529F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462872DF-76CE-474D-BCB0-8EF1559D529F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A598EBF-BD3B-4E49-B9AE-1CB5B0271102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A598EBF-BD3B-4E49-B9AE-1CB5B0271102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A598EBF-BD3B-4E49-B9AE-1CB5B0271102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A598EBF-BD3B-4E49-B9AE-1CB5B0271102}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
