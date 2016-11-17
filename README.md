@@ -1,20 +1,24 @@
-# ½u¤WÅª®Ñ·| - API Token ¤Jªù
+# ç·šä¸Šè®€æ›¸æœƒ - API Token å…¥é–€
 
 
-½d¨Òµ{¦¡ source code¡A¤Î PPT ³£¦b³o¸Ì¡C
+ç¯„ä¾‹ç¨‹å¼ source codeï¼ŒåŠ PPT éƒ½åœ¨é€™è£¡ã€‚
 
-®i¥Ü¥Îªº¨â­Ó web app, §Ú¤]¦b Azure ¤W­±§G¸p¤F¤@¥÷¡C
-­n´ú¸Õªº¥i¥Hª½±µ³s³oÃä:
+**PPT** ä¸‹è¼‰: [APITOKEN-DEMO.pptx](APITOKEN-DEMO.pptx?raw=true)
 
-- **AUTH**: °õ¦æ»{ÃÒ»P±ÂÅv  
+
+å±•ç¤ºç”¨çš„å…©å€‹ web app, æˆ‘ä¹Ÿåœ¨ Azure ä¸Šé¢ä½ˆç½²äº†ä¸€ä»½ã€‚
+è¦æ¸¬è©¦çš„å¯ä»¥ç›´æŽ¥é€£é€™é‚Š:
+
+- **AUTH**: åŸ·è¡Œèªè­‰èˆ‡æŽˆæ¬Š  
 http://andrewmeetupdemoauth.azurewebsites.net/swagger/
 
-- **API**: ¦s¨úªA°È  
+- **API**: å­˜å–æœå‹™  
 http://andrewmeetupdemoapi.azurewebsites.net/swagger/
 
 
 
-### ²£¥Í APIKEY ªº«ü¥O
+
+### ç”¢ç”Ÿ APIKEY çš„æŒ‡ä»¤
 
 > C:\\> ApiKeyGenerator.exe AndrewWu VIP CTO MVP
 ```
