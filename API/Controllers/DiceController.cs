@@ -16,7 +16,12 @@ namespace MeetUp.ApiTokenDemo.API.Controllers
 
 
         // GET api/<controller>/5
-        // 骰出指定次數的骰子
+
+        /// <summary>
+        /// 骰出指定次數的骰子
+        /// </summary>
+        /// <param name="count">要骰幾次?</param>
+        /// <returns></returns>
         [SwaggerOperation("GetMany")]
         [SwaggerOperationFilter(typeof(AddSessionTokenParameter))]
         public IEnumerable<int> Get(int count)
@@ -28,7 +33,13 @@ namespace MeetUp.ApiTokenDemo.API.Controllers
 
             if (session.UserHostAddress != System.Web.HttpContext.Current.Request.UserHostAddress)
             {
-                throw new SecurityException("IP address not valid.");
+                //throw new SecurityException("IP address not valid.");
+                //return this.Request.CreateErrorResponse(HttpStatusCode.Forbidden, "This method is not allowed!");
+                throw new HttpResponseException(new HttpResponseMessage() {
+                    StatusCode = HttpStatusCode.Forbidden,
+                    ReasonPhrase = "Forbidden.",
+                    Content = new StringContent($"Your IP address was not valid. Expected: {session.UserHostAddress}, Actual: {System.Web.HttpContext.Current.Request.UserHostAddress}.")
+                });
             }
 
 

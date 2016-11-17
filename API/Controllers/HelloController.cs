@@ -11,15 +11,12 @@ using System.Web.Http.Description;
 
 namespace MeetUp.ApiTokenDemo.API.Controllers
 {
-    /// <summary>
-    /// Hello API controller demo.
-    /// </summary>
     public class HelloController : ApiController
     {
         // GET api/values
 
         /// <summary>
-        /// Hello World API test!
+        /// 測試用 API，只會說 Hello!
         /// </summary>
         /// <returns></returns>
         [SwaggerOperation("GetAll")]
