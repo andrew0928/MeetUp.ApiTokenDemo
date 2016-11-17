@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Hosting;
 using System.Web.Http;
 using System.Web.Routing;
 
@@ -14,8 +15,8 @@ namespace MeetUp.ApiTokenDemo.AUTH
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
-            TokenHelper.AddKeyFile("APIKEY", @"E:\BlogWork\MeetUp.ApiTokenDemo\APIKEY.xml");
-            TokenHelper.AddKeyFile("SESSION", @"E:\BlogWork\MeetUp.ApiTokenDemo\SESSION-PRIVATE.xml");
+            TokenHelper.AddKeyFile("APIKEY", HostingEnvironment.MapPath(@"~/App_Data/APIKEY.xml"));
+            TokenHelper.AddKeyFile("SESSION", HostingEnvironment.MapPath(@"~/App_Data/SESSION-PRIVATE.xml"));
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security;
 using System.Web.Http;
 
 namespace MeetUp.ApiTokenDemo.API.Controllers
@@ -20,7 +21,16 @@ namespace MeetUp.ApiTokenDemo.API.Controllers
         [SwaggerOperationFilter(typeof(AddSessionTokenParameter))]
         public IEnumerable<int> Get(int count)
         {
-            SessionToken session = TokenHelper.DecodeToken<SessionToken>("SESSION", this.Request.Headers.GetValues("X-SESSION").First());
+            // session check
+            SessionToken session = TokenHelper.DecodeToken<SessionToken>(
+                "SESSION", 
+                this.Request.Headers.GetValues("X-SESSION").First());
+
+            if (session.UserHostAddress != System.Web.HttpContext.Current.Request.UserHostAddress)
+            {
+                throw new SecurityException("IP address not valid.");
+            }
+
 
             for (int i = 0; i < count; i++)
             {

@@ -27,6 +27,7 @@ namespace MeetUp.ApiTokenDemo.AUTH.Controllers
 
             SessionToken sessionToken = TokenHelper.CreateToken<SessionToken>();
             sessionToken.ClientID = apikeyToken.ClientID;
+            sessionToken.UserHostAddress = System.Web.HttpContext.Current.Request.UserHostAddress;
             sessionToken.CreateDate = DateTime.Now;
             sessionToken.ExpireDate = DateTime.Now.AddHours(1.0);
             sessionToken.EnableAdminFunction = false;

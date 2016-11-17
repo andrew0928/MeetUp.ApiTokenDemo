@@ -16,6 +16,8 @@ namespace MeetUp.ApiTokenDemo.SDK
         [JsonProperty]
         public string ClientID { get; set; }
 
+        [JsonProperty]
+        public string UserHostAddress { get; set; }
 
         [JsonProperty]
         public bool EnableAdminFunction { get; set; }

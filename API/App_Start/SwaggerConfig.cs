@@ -6,6 +6,7 @@ using Swashbuckle.Application;
 using Swashbuckle.Swagger;
 using WebActivatorEx;
 using MeetUp.ApiTokenDemo.API;
+using System.Web.Hosting;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -100,7 +101,7 @@ namespace MeetUp.ApiTokenDemo.API
                         // those comments into the generated docs and UI. You can enable this by providing the path to one or
                         // more Xml comment files.
                         //
-                        c.IncludeXmlComments(@"E:\BlogWork\MeetUp.ApiTokenDemo\API\bin\MeetUp.ApiTokenDemo.API.XML");
+                        c.IncludeXmlComments(HostingEnvironment.MapPath(@"~/bin/MeetUp.ApiTokenDemo.API.XML"));
 
                         // Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
                         // exposed in your API. However, there may be occasions when more control of the output is needed.
@@ -187,8 +188,8 @@ namespace MeetUp.ApiTokenDemo.API
                         //
                         //c.CustomProvider((defaultProvider) => new CachingSwaggerProvider(defaultProvider));
                         // ***** Uncomment the following to enable the swagger UI *****
-                        
-                            })
+
+                    })
                         .EnableSwaggerUi(c =>
                             {
                         
