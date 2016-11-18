@@ -4,6 +4,7 @@
 範例程式 source code，及 PPT 都在這裡。
 
 **PPT** 下載: [APITOKEN-DEMO.pptx](APITOKEN-DEMO.pptx?raw=true)
+**SLIDESHARE**: http://www.slideshare.net/chickenwu/api-token
 
 
 展示用的兩個 web app, 我也在 Azure 上面佈署了一份。
