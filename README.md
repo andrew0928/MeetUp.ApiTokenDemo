@@ -1,5 +1,6 @@
 # 線上讀書會 - API Token 入門
 
+文字版 - 文章介紹 [網址](http://columns.chicken-house.net/2016/12/01/microservice7-apitoken/)
 
 範例程式 source code，及 PPT 都在這裡。
 
